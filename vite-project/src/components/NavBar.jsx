@@ -68,6 +68,12 @@ const Navbar = () => {
                                 Downloads
                             </li>
                             <li
+                                className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                                onClick={() => navigateTo("/upload")}
+                            >
+                                Upload File
+                            </li>
+                            <li
                                 className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-red-500"
                                 onClick={handleLogout}
                             >

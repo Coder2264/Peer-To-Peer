@@ -17,7 +17,7 @@ const SignUp = () => {
         }
 
         try {
-            const response = await apiClient.post("/signup", {
+            const response = await apiClient.post("/users/register", {
                 username,
                 password,
                 email,
@@ -26,8 +26,8 @@ const SignUp = () => {
             console.log(response.data);
 
             // Optionally save the token if provided in the response
-            if (response.data.token) {
-                localStorage.setItem("authToken", response.data.token);
+            if (response.status === 200) {
+                localStorage.setItem("username", username);
             }
 
             // Redirect the user to the login page

@@ -10,7 +10,7 @@ const Login = () => {
 
     const handleLogin = async () => {
         try {
-            const response = await apiClient.post("/login", {
+            const response = await apiClient.post("/users/login", {
                 username,
                 password,
             });
@@ -18,7 +18,7 @@ const Login = () => {
             console.log(response.data);
 
             // Save the token in local storage
-            localStorage.setItem("authToken", response.data.token);
+            localStorage.setItem("username", username);
 
             // Redirect the user to the home page
             navigate("/");
