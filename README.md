@@ -1,6 +1,6 @@
 # P2P File Transfer
 
-Welcome to the P2P File Transfer project! This is a decentralized file-sharing system that enables users to transfer files over a local network (LAN) without requiring an internet connection.
+Welcome to the P2P File Transfer project! This is a file-sharing system that enables users to transfer files over a local network (LAN) without requiring an internet connection.
 
 ## Table of Contents
 - [Screenshots](#screenshots)
