@@ -61,8 +61,8 @@ Welcome to the P2P File Transfer project! This is a decentralized file-sharing s
 ![Node.js](https://nodejs.org/static/images/logo.svg)
 - **Node.js** (Backend)
 
-![Express.js](https://expressjs.com/images/express-facebook-share.png)
-- **Express.js** (Server)
+![Electron.js]([https://expressjs.com/images/express-facebook-share.png](https://res.cloudinary.com/da7nnqjzz/image/upload/v1741171920/electron_g1zq6q.png))
+- **Electron.js** (Desktop App)
 
 ![React.js](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png)
 - **React.js** (Frontend)
@@ -70,8 +70,8 @@ Welcome to the P2P File Transfer project! This is a decentralized file-sharing s
 ![Tailwind CSS](https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg)
 - **Tailwind CSS** (Styling)
 
-![WebSockets](https://upload.wikimedia.org/wikipedia/commons/8/86/WebSocket_logo.svg)
-- **WebSockets** (Real-time P2P communication)
+![Socket IO]([https://upload.wikimedia.org/wikipedia/commons/8/86/WebSocket_logo.svg](https://res.cloudinary.com/da7nnqjzz/image/upload/v1741171995/socketio_a19mq0.png))
+- **Socket IO** (Real-time P2P communication)
 
 
 ## Contributing
