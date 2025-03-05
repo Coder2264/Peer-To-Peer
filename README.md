@@ -8,9 +8,6 @@ Welcome to the P2P File Transfer project! This is a decentralized file-sharing s
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
@@ -18,21 +15,41 @@ Welcome to the P2P File Transfer project! This is a decentralized file-sharing s
 
 ## Screenshots
 
-![File Sharing Page](https://res.cloudinary.com/da7nnqjzz/image/upload/v1741167734/Screenshot_28_jm137r.png)
-*File Sharing Page*
+![Speed shown](https://res.cloudinary.com/da7nnqjzz/image/upload/v1741167734/Screenshot_28_jm137r.png)
+*Peak Speed*
 
-![Search Page](https://res.cloudinary.com/da7nnqjzz/image/upload/v1741167726/Screenshot_21_u6ueoi.png)
-*Search Page*
+![Chat Page](https://res.cloudinary.com/da7nnqjzz/image/upload/v1741167726/Screenshot_21_u6ueoi.png)
+*Chat Page*
+
+![File Page](https://res.cloudinary.com/da7nnqjzz/image/upload/v1741167726/Screenshot_20_bs8ul2.png)
+*File Page*
+
+![Home Page](https://res.cloudinary.com/da7nnqjzz/image/upload/v1741167724/Screenshot_16_cg1uui.png)
+*Home Page*
+
+![Search](https://res.cloudinary.com/da7nnqjzz/image/upload/v1741167721/Screenshot_17_i66c7a.png)
+*Search Results*
+
+![Uploading](https://res.cloudinary.com/da7nnqjzz/image/upload/v1741167722/Screenshot_14_oecmic.png)
+*Uploading Page*
+
+![Upload metadata](https://res.cloudinary.com/da7nnqjzz/image/upload/v1741167721/Screenshot_15_pllgiw.png)
+*Metadata uploaded*
+
+![Comments shown](https://res.cloudinary.com/da7nnqjzz/image/upload/v1741167720/Screenshot_13_kkciny.png)
+*Comments*
 
 ## Demo Video
 
-*Coming soon...*
+[Watch the demo video](https://youtu.be/T-baPrYB-Bk)
+
+*Click the link to watch the demo video*
 
 ## Features
 - **User Registration**: Users can create an account and log in.
 - **File Sharing**: Users can upload and view shared files from all users.
 - **Search Functionality**: Search by file name, description, or file type.
-- **High-Speed File Transfer**: Achieves up to **32 MBps** on a mobile hotspot.
+- **High-Speed File Transfer**: Achieves up to **32.7 MBps** on a mobile hotspot.
 - **LAN Connectivity**: No internet required; works over the same local network.
 - **User Interface**: Built with **React.js** and **Tailwind CSS** for a seamless experience.
 - **Rating & Comments**: Users can rate and comment on shared files.
@@ -56,84 +73,6 @@ Welcome to the P2P File Transfer project! This is a decentralized file-sharing s
 ![WebSockets](https://upload.wikimedia.org/wikipedia/commons/8/86/WebSocket_logo.svg)
 - **WebSockets** (Real-time P2P communication)
 
-## Getting Started
-
-These instructions will help you set up the project on your local machine.
-
-### Prerequisites
-- [Node.js](https://nodejs.org/en/)
-- [npm](https://www.npmjs.com/)
-- [MongoDB](https://www.mongodb.com/)
-
-### Installation
-
-1. **Clone the repository**
-    ```bash
-    git clone https://github.com/your-username/p2p-file-transfer.git
-    cd p2p-file-transfer
-    ```
-2. **Install backend dependencies**
-    ```bash
-    cd backend
-    npm install
-    ```
-3. **Install frontend dependencies**
-    ```bash
-    cd ../frontend
-    npm install
-    ```
-4. **Set up environment variables**
-    Create a `.env` file in the `backend` directory and add your configuration details:
-    ```env
-    PORT=3000
-    MONGODB_URI=
-    FRONTEND_URL=http://localhost:5173
-    ```
-5. **Start the backend server**
-    ```bash
-    cd backend
-    npm start
-    ```
-6. **Start the frontend server**
-    ```bash
-    cd ../frontend
-    npm start
-    ```
-
-## Usage
-Once installed, open `http://localhost:5173` in your web browser.
-
-- **Register/Login**: Create an account or log in.
-- **Upload Files**: Share files with others.
-- **Search Files**: Find files based on name, description, or type.
-- **Download Files**: Transfer files securely.
-- **Chat**: Communicate with other online users.
-
-## Project Structure
-
-```plaintext
-p2p-file-transfer/
-├── backend/
-│   ├── controllers/
-│   ├── models/
-│   ├── routes/
-│   ├── utilities/
-│   ├── .env
-│   ├── app.js
-│   ├── database.js
-│   └── package.json
-├── frontend/
-│   ├── public/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── App.jsx
-│   │   ├── Axios.js
-│   │   └── main.jsx
-│   ├── .env
-│   └── package.json
-└── README.md
-```
 
 ## Contributing
 
