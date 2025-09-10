@@ -29,14 +29,13 @@ The system has a **hybrid architecture**:
 
 ### 📊 System Design Diagram
 
-![System Design Diagram](./docs/system-architecture.png)
-*(Replace with your diagram path in the repo)*
+![System Design Diagram](https://res.cloudinary.com/dcij8s42h/image/upload/v1757491017/Screenshot_2025-09-10_at_1.26.18_PM_yabopa.png)
 
 ### Components
 
 * **Signaling Server**
 
-  * Node.js/Express.js backend with Socket.IO
+  * Node.js/Express.js backend
   * Handles registration, authentication, metadata, ratings, and peer discovery
 
 * **Client**
@@ -61,6 +60,20 @@ The system has a **hybrid architecture**:
 * **File Transfer Engine:** Python (custom service for high-speed P2P transfers)
 * **Backend (Signaling Server):** Node.js, Express.js, Socket.IO
 * **Database:** (Mention if you’re using MongoDB/Postgres/Redis etc.)
+
+---
+## 🔒 Security
+
+* Encrypted file transfer channels
+* Secure peer-to-peer communication over LAN
+* Authentication & session management handled via signaling server
+
+---
+
+## 📈 Performance
+
+* Achieves **\~261.6 Mbps** transfer speed on a standard mobile hotspot.
+* Optimized for **low latency & high throughput** file transfers.
 
 ---
 ## Screenshots
@@ -92,66 +105,5 @@ The system has a **hybrid architecture**:
 
 ---
 
-## 🚀 Getting Started
 
-### Prerequisites
 
-* Node.js (>= 18)
-* Python (>= 3.10)
-* npm / yarn
-* (Optional) Redis or DB for signaling server
-
-### Installation
-
-```bash
-# Clone the repo
-git clone https://github.com/yourusername/p2p-file-sharing.git
-cd p2p-file-sharing
-
-# Install signaling server dependencies
-cd signaling-server
-npm install
-
-# Install Electron client
-cd ../client
-npm install
-
-# Install Python service dependencies
-cd ../file-transfer-service
-pip install -r requirements.txt
-```
-
-### Running
-
-```bash
-# Start signaling server
-cd signaling-server
-npm start
-
-# Start Electron client
-cd ../client
-npm run dev
-
-# Start Python file transfer service
-cd ../file-transfer-service
-python service.py
-```
-
----
-
-## 🔒 Security
-
-* Encrypted file transfer channels
-* Secure peer-to-peer communication over LAN
-* Authentication & session management handled via signaling server
-
----
-
-## 📈 Performance
-
-* Achieves **\~32.7 MBps** transfer speed on a standard mobile hotspot.
-* Optimized for **low latency & high throughput** file transfers.
-
----
-
-Would you like me to also **add a "How It Works" section with sequence diagrams** (login, file transfer, chat), or keep it at a high-level system architecture for now?
