@@ -1,18 +1,68 @@
-# P2P File Transfer
+# 📂 P2P File Sharing System
 
-Welcome to the P2P File Transfer project! This is a file-sharing system that enables users to transfer files over a local network (LAN) without requiring an internet connection.
+A **peer-to-peer (P2P) file sharing and chat system** with a modern desktop UI, built for **fast, secure, and decentralized communication**.
 
-## Table of Contents
-- [Screenshots](#screenshots)
-- [Demo Video](#demo-video)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Getting Started](#getting-started)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
+This system enables users to **share files directly over LAN** without internet dependency, discover peers via a signaling server, and communicate via encrypted chat.
 
+---
+
+## ✨ Features
+
+* 🔐 **User Registration & Login** – Accounts managed via signaling server.
+* 📁 **File Sharing** – Upload and view metadata of shared files across peers.
+* 🔍 **Search** – Search files by name, description, or type.
+* ⚡ **High-Speed Transfers** – Achieves up to **32.7 MBps** over LAN.
+* 🌐 **LAN Connectivity** – Works without internet, peer-to-peer via local network.
+* 💬 **P2P Chat** – Real-time direct messaging between peers using Socket.IO.
+* ⭐ **Ratings & Comments** – Share feedback on files.
+* 🔒 **File Encryption** – Ensures secure transfers.
+* 🎨 **Modern UI** – Built with **React.js** + **Tailwind CSS** inside an Electron desktop app.
+
+---
+
+## 🏗️ Architecture Overview
+
+The system has a **hybrid architecture**:
+
+* A **Signaling Server (Node.js/Express.js + Socket.IO)** for peer discovery, authentication, and metadata storage.
+* A **Desktop Client (Electron + React + Python)** that handles UI, orchestration, and high-speed peer-to-peer file transfers.
+
+### 📊 System Design Diagram
+
+![System Design Diagram](./docs/system-architecture.png)
+*(Replace with your diagram path in the repo)*
+
+### Components
+
+* **Signaling Server**
+
+  * Node.js/Express.js backend with Socket.IO
+  * Handles registration, authentication, metadata, ratings, and peer discovery
+
+* **Client**
+
+  * **UI Layer (React + Tailwind)** – presentation & chat
+  * **Orchestrator (Electron)** – bridges UI and backend
+  * **P2P Engine (Python)** – encrypted high-throughput file transfers
+  * **Local Storage** – access to filesystem for upload/download
+
+* **P2P Communication**
+
+  * File Transfer: Python ↔ Python direct connections
+  * Chat: React ↔ React via Socket.IO (peer-to-peer)
+  * Metadata: React/Electron ↔ Signaling Server
+
+---
+
+## ⚙️ Tech Stack
+
+* **Frontend:** React.js, Tailwind CSS
+* **Desktop Shell:** Electron
+* **File Transfer Engine:** Python (custom service for high-speed P2P transfers)
+* **Backend (Signaling Server):** Node.js, Express.js, Socket.IO
+* **Database:** (Mention if you’re using MongoDB/Postgres/Redis etc.)
+
+---
 ## Screenshots
 
 ![Speed shown](https://res.cloudinary.com/da7nnqjzz/image/upload/v1741167734/Screenshot_28_jm137r.png)
@@ -39,62 +89,69 @@ Welcome to the P2P File Transfer project! This is a file-sharing system that ena
 ![Comments shown](https://res.cloudinary.com/da7nnqjzz/image/upload/v1741167720/Screenshot_13_kkciny.png)
 *Comments*
 
-## Demo Video
 
-[Watch the demo video](https://youtu.be/T-baPrYB-Bk)
+---
 
-*Click the link to watch the demo video*
+## 🚀 Getting Started
 
-## Features
-- **User Registration**: Users can create an account and log in.
-- **File Sharing**: Users can upload and view shared files from all users.
-- **Search Functionality**: Search by file name, description, or file type.
-- **High-Speed File Transfer**: Achieves up to **32.7 MBps** on a mobile hotspot.
-- **LAN Connectivity**: No internet required; works over the same local network.
-- **User Interface**: Built with **React.js** and **Tailwind CSS** for a seamless experience.
-- **Rating & Comments**: Users can rate and comment on shared files.
-- **P2P Chat**: Enables direct messaging between online users.
-- **File Encryption**: Secure file transfers with encryption.
+### Prerequisites
 
-## Technologies Used
+* Node.js (>= 18)
+* Python (>= 3.10)
+* npm / yarn
+* (Optional) Redis or DB for signaling server
 
-![Node.js](https://nodejs.org/static/images/logo.svg)
-- **Node.js** (Backend)
+### Installation
 
-![Electron.js](https://res.cloudinary.com/da7nnqjzz/image/upload/v1741171920/electron_g1zq6q.png)
-- **Electron.js** (Desktop App)
+```bash
+# Clone the repo
+git clone https://github.com/yourusername/p2p-file-sharing.git
+cd p2p-file-sharing
 
-![React.js](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png)
-- **React.js** (Frontend)
+# Install signaling server dependencies
+cd signaling-server
+npm install
 
-![Tailwind CSS](https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg)
-- **Tailwind CSS** (Styling)
+# Install Electron client
+cd ../client
+npm install
 
-![Socket IO](https://res.cloudinary.com/da7nnqjzz/image/upload/v1741171995/socketio_a19mq0.png)
-- **Socket IO** (Real-time P2P communication)
+# Install Python service dependencies
+cd ../file-transfer-service
+pip install -r requirements.txt
+```
 
+### Running
 
-## Contributing
+```bash
+# Start signaling server
+cd signaling-server
+npm start
 
-Contributions are welcome! Follow these steps to contribute:
-1. Fork the project
-2. Create a new branch (`git checkout -b feature/NewFeature`)
-3. Commit your changes (`git commit -m 'Add new feature'`)
-4. Push to the branch (`git push origin feature/NewFeature`)
-5. Open a pull request
+# Start Electron client
+cd ../client
+npm run dev
 
-## License
+# Start Python file transfer service
+cd ../file-transfer-service
+python service.py
+```
 
-Distributed under the MIT License. See `LICENSE` for more information.
+---
 
-## Contact
+## 🔒 Security
 
-Md Kamran - akhtarkamran2004@gmail.com
+* Encrypted file transfer channels
+* Secure peer-to-peer communication over LAN
+* Authentication & session management handled via signaling server
 
-Project Link: [https://github.com/Coder2264/Peer-To-Peer](https://github.com/Coder2264/Peer-To-Peer)
+---
 
-## Acknowledgements
+## 📈 Performance
 
-- [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
-- [Img Shields](https://shields.io)
-- [Choose an Open Source License](https://choosealicense.com)
+* Achieves **\~32.7 MBps** transfer speed on a standard mobile hotspot.
+* Optimized for **low latency & high throughput** file transfers.
+
+---
+
+Would you like me to also **add a "How It Works" section with sequence diagrams** (login, file transfer, chat), or keep it at a high-level system architecture for now?
