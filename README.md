@@ -58,9 +58,8 @@ The system has a **hybrid architecture**:
 * **Frontend:** React.js, Tailwind CSS
 * **Desktop Shell:** Electron
 * **File Transfer Engine:** Python (custom service for high-speed P2P transfers)
-* **Backend (Signaling Server):** Node.js, Express.js, Socket.IO
-* **Database:** (Mention if you’re using MongoDB/Postgres/Redis etc.)
-
+* **Backend (Signaling Server):** Node.js, Express.js
+* **Database:** MongoDB
 ---
 ## 🔒 Security
 
