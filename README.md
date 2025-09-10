@@ -11,7 +11,7 @@ This system enables users to **share files directly over LAN** without internet 
 * 🔐 **User Registration & Login** – Accounts managed via signaling server.
 * 📁 **File Sharing** – Upload and view metadata of shared files across peers.
 * 🔍 **Search** – Search files by name, description, or type.
-* ⚡ **High-Speed Transfers** – Achieves up to **32.7 MBps** over LAN.
+* ⚡ **High-Speed Transfers** – Achieves up to **261.6 Mbps** over LAN.
 * 🌐 **LAN Connectivity** – Works without internet, peer-to-peer via local network.
 * 💬 **P2P Chat** – Real-time direct messaging between peers using Socket.IO.
 * ⭐ **Ratings & Comments** – Share feedback on files.
